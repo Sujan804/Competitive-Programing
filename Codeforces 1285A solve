@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+#define kaj_ses return 0;
+using namespace std;
+int main()
+{
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(NULL);
+    std::cout.tie(NULL);
+    int n,i,j;
+    string str;
+    cin>>n;
+    cin>>str;
+    cout<<n+1;//it's answer is always n+1
+    kaj_ses;
+
+}
