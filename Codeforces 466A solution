@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+#define kaj_ses return 0;
+using namespace std;
+int main()
+{
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(NULL);
+    std::cin.tie(NULL);
+    int n,m,a,b,sum1=0,sum2=0,sum3=1000000,Finalsum,tempsum,tempsum1;
+    cin>>n>>m>>a>>b;
+
+     sum1 = (n/m)*b;
+     sum2 = (n%m)*a;
+     tempsum = sum1+sum2;
+     tempsum1 = n*a;
+     if ( ((n/m)*m )<n)
+     {
+         sum3 = ((n/m)+1)*b;
+     }
+
+
+     Finalsum = min(tempsum1,min(tempsum,sum3));
+
+     cout<<Finalsum<<endl;
+     kaj_ses;
+
+}
