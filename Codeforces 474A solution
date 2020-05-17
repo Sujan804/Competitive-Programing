@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+#define kaj_ses return 0;
+using namespace std;
+int main()
+{
+    string sample ="qwertyuiopasdfghjkl;zxcvbnm,./";
+    string wrong ;
+    int i,l,j;
+    char t,ch;
+    cin>>t;
+    cin>>wrong;
+    l = wrong.size();
+    if(t=='R')
+    {
+        for(i = 0;i<l;i++)
+        {
+            ch = wrong[i];
+            for(j=0;j<30;++j)
+            {
+                if(ch==sample[j])
+                    cout<<sample[j-1];
+
+            }
+        }
+    }
+    else
+    {
+        for(i = 0;i<l;i++)
+        {
+            ch = wrong[i];
+            for(j=0;j<30;++j)
+            {
+                if(ch==sample[j])
+                    cout<<sample[j+1];
+
+            }
+        }
+
+    }
+    kaj_ses;
+}
