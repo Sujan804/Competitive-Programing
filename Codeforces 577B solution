@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define kaj_ses return 0;
+int main()
+{
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(0);
+    std::cout.tie(0);
+    int n,x,i,j,temp,cnt=0;
+    cin>>n;
+    cin>>x;
+    for(i=1;i<=n;i++)
+    {
+        if (x % i == 0 && x / i <= n) {
+                        cnt++;
+                }
+    }
+    cout<<cnt<<endl;
+
+}
