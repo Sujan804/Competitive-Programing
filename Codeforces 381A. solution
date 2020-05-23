@@ -1,0 +1,52 @@
+#include<bits/stdc++.h>
+#define kaj_ses return 0
+using namespace std;
+int main()
+{
+       deque<int>li;
+       int n,temp,sre=0,dina=0;
+       cin>>n;
+       for(int i=0;i<n;i++)
+       {
+           cin>>temp;
+           li.push_back(temp);
+       }
+     for(int i =0 ;i<n;i++)
+       {
+           if(i%2==0)
+            {
+           if(li.front()>=li.back())
+           {
+               sre += li.front();
+               li.pop_front();
+               if(!li.empty());
+           }
+           else
+           {
+               sre += li.back();
+               li.pop_back();
+              if(!li.empty());
+           }
+           }
+
+
+           else{
+
+            if(li.front()>=li.back())
+           {
+               dina += li.front();
+               li.pop_front();
+              if(!li.empty());
+           }
+           else
+           {
+               dina += li.back();
+               li.pop_back();
+             if(!li.empty());
+           }
+           }
+       }
+       cout<<sre<<' '<<dina<<endl;
+       kaj_ses;
+
+}
