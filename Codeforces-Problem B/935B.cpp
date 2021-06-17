@@ -1,21 +1,20 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    int n,cntR=0,cntU=0,result=0,i;
     string str;
+    int n;
     cin>>n;
     cin>>str;
-    for(i=0;i<n-1;i++){
+    int cntU=0,cntR=0;
+    int MaxDiff = 0;
+    for(int i=0;i<n;i++){
         if(str[i]=='U')
             cntU++;
-        else if(str[i]=='R')
+        else
             cntR++;
+        MaxDiff = max(MaxDiff,abs(cntU-cntR));
 
-        if(cntU==cntR&&str[i]==str[i+1]){
-            result++;
-        }
     }
-    cout<<result<<endl;
-
-
+    cout<<MaxDiff<<endl;
+    return 0;
 }
